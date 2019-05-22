@@ -1,28 +1,181 @@
+/*GLOBAL*/
 * {
 	box-sizing: border-box;
 }
 
+html {
+	height: 100%;
+}
+
 body {
+	font-family: 'Open Sans', sans-serif;
 	width: 100%;
 	text-align: center;
+	background-color: #EDF5FC;
+	overflow: hidden;
+	height: 100%;
 }
 
-.grid {
-	max-width: 1280px;
-  	margin: 0 auto;
-}
-
-.grid_forth {
-	float: left;
-	width: 25%;
-	margin:;
-}
-
-.thumb {
-	width: 220px;
-	height: 220px;
+/*HEADER*/
+.header {
+	padding-top: 70px;
+	position: fixed;
+	height: 15%;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: white;
 }
 
 input {
-	padding: 10px 50px;
+	width: 70%;
+	margin: 0 auto;
+	padding: 30px;
+	border: 0;
+	color: #272D2D;
+	text-align: center;
+	font-size: 60px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	transition: border 2s;
+}
+
+input:focus {
+	outline: 0;
+	text-align: left;
+	border-bottom: solid lightgrey 4px;
+}
+
+input::placeholder {
+	text-align: center;
+	transition: 1s;
+}
+
+input:focus::placeholder {
+	color: lightgrey;
+	font-size: 30px;
+	transform: translate(-200px, 0);
+}
+
+/*MAIN*/
+.grid {
+	position: relative;
+    top: 261px;
+    width: 70%;
+    max-height: 75%;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.grid_image {
+	margin: 150px auto;
+	padding: 10px;
+	border: solid #A39BA8 7px;
+}
+
+.thumb {
+	width: 100%;
+}
+
+/*FOOTER*/
+.foot {
+	height: 10%;
+    padding-top: 10px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: white;
+}
+
+.foot p {
+	font-size: 30px;
+	letter-spacing: 5px;
+}
+
+.foot p:nth-child(2) {
+	font-size: 20px;
+}
+
+
+/*MEDIA QUERIES*/
+/*IPHONE X*/
+@media screen and (min-width: 375px) {
+	.header {
+		padding-top: 90px;
+	}
+
+	.grid {
+		width: 60%;
+		top: 318px;
+	}
+
+	.foot {
+		padding-top: 30px;
+	}
+}
+
+/*@media screen and (min-width: 768px and max-width: 1365px) {
+	input {
+		width: 550px;
+	}
+
+	.grid {
+		max-width: 1024px;
+	}
+
+	.grid_image {
+		width: 33%;
+	}
+
+	.grid_forth:nth-of-type(n + 4) {
+		margin-top: 40px;
+	}
+}
+
+@media screen and (min-width: 1366px) {
+	input {
+		width: 550px;
+	}
+
+	.grid {
+		max-width: 1024px;
+	}
+
+	.grid_image {
+		width: 25%;
+	}
+
+	.grid_forth:nth-of-type(n + 5) {
+		margin-top: 40px;
+	}
+}*/
+
+
+/*input {
+	width: 100%;
+	margin: 0 auto;
+	padding: 30px;
+	border: solid lightgrey 2px;
+	border-radius: 7px;
+	font-size: 60px;
+	font-weight: bold;
+}*/
+
+
+
+/*JAVASCRIPT SETTINGS*/
+/*STICKY*/
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.sticky + .grid {
+  padding-top: 102px;
+}
+
+.sticky input {
+  width: 70%;
 }
