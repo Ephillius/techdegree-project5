@@ -62,19 +62,21 @@ input:focus::placeholder {
 
 /*MAIN*/
 .grid {
+	padding: 0;
+	margin: 0;
     height: 75vh;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .grid_image {
-	text-align: center;	
-	width: 60%;
+	width: 60vw;
 	margin: 55px auto;
 	padding: 5px;
 	border: solid #A39BA8 7px;
 }
 
 .thumb {
+	display: block;
 	width: 100%;
 }
 
@@ -87,9 +89,10 @@ input:focus::placeholder {
 }
 
 .info {
+	display: flex;
+	flex-direction: column;
 	text-align: center;	
-	align-self: center;	
-	padding: 2% 0;
+	align-self: center;
 }
 
 .foot p {
@@ -102,14 +105,71 @@ input:focus::placeholder {
 span {
 	font-size: 9px;
 	letter-spacing: 3px;
+	padding-top: 2%;
 }
 
 
 /*MEDIA QUERIES*/
 @media screen and (min-width: 768px) {
+	input {
+		width: 50vw;
+	}
 
+	.grid{
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	.grid_image {
+		flex-basis: 35%;
+	}
+
+	.grid_image:nth-child(odd) {
+		margin-right: 10px;
+	}
+
+	.foot p {
+		font-size: 15px;
+		letter-spacing: 7px;
+	}
+
+	span {
+		font-size: 12px;
+		letter-spacing: 5px;
+	}
 }
 
 @media screen and (min-width: 1024px) {
+	input {
+		font-size: 30px;
+		padding: 5px;
+	}
 
+	.grid_image {
+		flex-basis: 27%;
+	}
+
+	.grid_image:nth-child(odd) {
+		margin-right: auto;
+	}
+}
+
+@media screen and (min-width: 1366px) {
+	input {
+		width: 30vw;
+	}
+
+	.grid {
+		align-content: space-between;
+	    max-width: 1024px;
+	    margin: auto;
+	}
+
+	.grid_image {
+		flex-basis: 20%;
+	}
+
+	.grid_image:nth-child(odd) {
+		margin-right: 33px;
+	}
 }
