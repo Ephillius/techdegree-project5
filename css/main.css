@@ -64,12 +64,16 @@ input:focus::placeholder {
 .grid {
 	padding: 0;
 	margin: 0;
-    height: 75vh;
-    overflow: auto;
+	height: 75vh;
+	overflow: auto;
+}
+
+.container {
+	width: 60%;
+	margin: 0 auto;
 }
 
 .grid_image {
-	width: 60vw;
 	margin: 55px auto;
 	padding: 5px;
 	border: solid #A39BA8 7px;
@@ -119,17 +123,6 @@ input:focus::placeholder {
 	border-radius: 0;
 }
 
-/*.lb-image, .lb-dataContainer {
-	max-width: 100%;
-	height: auto !important;
-	width: 100%;
-}
-
-.lb-outerContainer {
-	max-width: 100%;
-	height: auto !important;
-}
-*/
 /*X button*/
 .lb-data .lb-close {
 	position: fixed;
@@ -172,17 +165,13 @@ input:focus::placeholder {
 		width: 50vw;
 	}
 
-	.grid{
-		display: flex;
-		flex-flow: row wrap;
-	}
-
 	.grid_image {
-		flex-basis: 35%;
+		float: left;
+		width: 45%;
 	}
 
-	.grid_image:nth-child(odd) {
-		margin-right: 10px;
+	.grid_image:nth-child(2n) {
+		margin-left: 10%;
 	}
 
 	.foot p {
@@ -200,7 +189,9 @@ input:focus::placeholder {
 	}
 
 	.lb-data .lb-details {
-		text-align: center;
+		float: none;
+		width: 60%;
+    	margin: 0 auto;
 	}
 }
 
@@ -211,12 +202,17 @@ input:focus::placeholder {
 	}
 
 	.grid_image {
-		flex-basis: 27%;
+		width: 30%;
 	}
 
-	.grid_image:nth-child(odd) {
-		margin-right: auto;
+	.grid_image:nth-child(2n) {
+		margin-left: 0;
 	}
+
+	.grid_image:nth-child(3n+2) {
+		margin-left: 5%;
+		margin-right: 5%;
+	}		
 
 	.lb-data .lb-close {
 		display: initial;
@@ -228,18 +224,27 @@ input:focus::placeholder {
 		width: 30vw;
 	}
 
-	.grid {
-		align-content: space-between;
-	    max-width: 1024px;
-	    margin: auto;
+	.container {
+		max-width: 1024px;
 	}
 
 	.grid_image {
-		flex-basis: 20%;
+		width: 20%;
 	}
 
-	.grid_image:nth-child(odd) {
-		margin-right: 33px;
+	.grid_image:nth-child(3n+2) {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.grid_image:nth-child(4n+2) {
+		margin-left: 5%;
+		margin-right: 2.5%;
+	}
+
+	.grid_image:nth-child(4n+3) {
+		margin-left: 2.5%;
+		margin-right: 5%;		
 	}
 
 	/*captions positioning*/
@@ -258,4 +263,14 @@ input:focus::placeholder {
 	.lb-nav a.lb-prev {
 		top: 35vh;
 	}
+}
+
+
+
+
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
