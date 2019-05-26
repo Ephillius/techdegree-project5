@@ -38,6 +38,7 @@ input {
 	text-align: center;
 	font-size: calc(16px + 1vw);
 	font-weight: bold;
+	line-height: 1.35;
 	letter-spacing: 2px;
 	transition: border 1s;
 }
