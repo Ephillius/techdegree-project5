@@ -19,7 +19,7 @@ var captions = [
 // when the page loads
 $(document).ready(function(){
 	//for each anchor tag child do:
-	$(".grid_image a").each(function(index){
+	$('.grid_image a').each(function(index){
 		//1st, if they have an attribute that starts with 'photo'
 		if($('a[href^="photo"]')){
 			//add another attribute of 'data-lightbox' with the value of 'roadtrip'
@@ -41,3 +41,21 @@ lightbox.option({
 	'alwaysShowNavOnTouchDevices': true,
 	'positionFromTop': 20
 })
+
+
+//while the user types down
+$('input').keyup(function() {
+	//create variables for both the value typed in
+	var value = $(this).val();
+	//and the regular expression one (had to look this one up)
+	var exp = new RegExp(value);
+	//for each link do:
+	$('.grid_image a').each(function() {
+		//create a variable that holds the match test
+		var isMatch = exp.test($(this).data('title'));
+		//toggle the match on & off
+		$(this).parent().toggle(isMatch);
+		//console test will show how many images match
+		console.log(isMatch);
+	});
+});
