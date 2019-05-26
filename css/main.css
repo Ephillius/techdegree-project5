@@ -156,7 +156,6 @@ input:focus::placeholder {
 	position: fixed;
 	top: 75vh;
 	width: 70px;
-	opacity: 1;
 }
 
 
@@ -216,7 +215,7 @@ input:focus::placeholder {
 	}
 
 	.container {
-		margin: 0 25%;
+		margin: 0 30%;
 	}
 
 	.grid_image {
