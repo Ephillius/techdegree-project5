@@ -12,7 +12,7 @@ var captions = [
 	'Sunset at the coast! The sky turned a lovely shade of orange.',
 	'I did a tour of a cave today and the view of the landscape below was breathtaking.',
 	'I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in.'
-]
+];
 
 //This function simplifies my job in terms of attribute addition
 //I don't need to add the captions to each one of the photos manually
@@ -33,14 +33,14 @@ $(document).ready(function(){
 			$(this).attr('data-title', captions[index]);
 			console.log(captions[index] + ' - caption added'); 
 		}
-	})
+	});
 });
 
 //Lightbox options
 lightbox.option({
 	'alwaysShowNavOnTouchDevices': true,
 	'positionFromTop': 20
-})
+});
 
 
 //while the user types down
@@ -48,7 +48,8 @@ $('input').keyup(function() {
 	//create variables for both the value typed in
 	var value = $(this).val();
 	//and the regular expression one (had to look this one up)
-	var exp = new RegExp(value);
+	//I also made it case insensitive by adding the i flag to the expression
+	var exp = new RegExp(value, 'i');
 	//for each link do:
 	$('.grid_image a').each(function() {
 		//create a variable that holds the match test
