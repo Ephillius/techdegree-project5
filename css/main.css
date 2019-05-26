@@ -70,12 +70,12 @@ input:focus::placeholder {
 }
 
 .container {
-	width: 60%;
-	margin: 0 auto;
+	margin: 0 20%;
 }
 
 .grid_image {
-	margin: 55px auto;
+	float: left;
+	margin: 30px auto;
 	padding: 5px;
 	border: solid #A39BA8 7px;
 	transition: box-shadow 0.3s;
@@ -166,15 +166,6 @@ input:focus::placeholder {
 		width: 50vw;
 	}
 
-	.grid_image {
-		float: left;
-		width: 45%;
-	}
-
-	.grid_image:nth-child(2n) {
-		margin-left: 10%;
-	}
-
 	.foot p {
 		font-size: 15px;
 		letter-spacing: 7px;
@@ -183,6 +174,12 @@ input:focus::placeholder {
 	.foot span {
 		font-size: 12px;
 		letter-spacing: 5px;
+	}
+
+	.grid_image {
+		width: 47%;
+		margin-left: 1.5%;
+		margin-right: 1.5%;
 	}
 
 	.lb-data .lb-close {
@@ -203,17 +200,10 @@ input:focus::placeholder {
 	}
 
 	.grid_image {
-		width: 30%;
+		width: 31%;
+	    margin-left: 1.15%;
+		margin-right: 1.15%;
 	}
-
-	.grid_image:nth-child(2n) {
-		margin-left: 0;
-	}
-
-	.grid_image:nth-child(3n+2) {
-		margin-left: 5%;
-		margin-right: 5%;
-	}		
 
 	.lb-data .lb-close {
 		display: initial;
@@ -226,32 +216,14 @@ input:focus::placeholder {
 	}
 
 	.container {
-		max-width: 1024px;
+		margin: 0 25%;
 	}
 
 	.grid_image {
-		width: 20%;
-	}
-
-	.grid_image:nth-child(3n+2) {
-		margin-left: 0;
-		margin-right: 0;
-	}
-
-	.grid_image:nth-child(4n+2) {
-		margin-left: 5%;
-		margin-right: 2.5%;
-	}
-
-	.grid_image:nth-child(4n+3) {
-		margin-left: 2.5%;
-		margin-right: 5%;		
-	}
-
-	/*captions positioning*/
-	/*.lb-data .lb-details {
-		padding-top: 20px;
-	}*/
+		width: 23%;
+		margin-left: 1%;
+		margin-right: 1%;
+	}	
 
 	.lb-data .lb-close {
 		position: fixed;
@@ -269,7 +241,7 @@ input:focus::placeholder {
 
 
 
-
+/*CLEARFIX HACK*/
 .clearfix::after {
   content: "";
   clear: both;
