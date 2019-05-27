@@ -39,7 +39,8 @@ $(document).ready(function(){
 //Lightbox options
 lightbox.option({
 	'alwaysShowNavOnTouchDevices': true,
-	'positionFromTop': 20
+	'positionFromTop': 20,
+	'showImageNumberLabel': false
 });
 
 
