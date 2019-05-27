@@ -74,7 +74,6 @@ input:focus::placeholder {
 }
 
 .grid_image {
-	float: left;
 	margin: 30px auto;
 	padding: 5px;
 	border: solid #A39BA8 7px;
@@ -131,10 +130,6 @@ input:focus::placeholder {
 	top: calc(81% - 15px);
 }
 
-.lb-data .lb-number {
-	display: none !important;
-}
-
 /*captions positioning*/
 .lb-data .lb-details {
 	padding-top: 20px;
@@ -152,12 +147,12 @@ input:focus::placeholder {
 
 .lb-nav a.lb-next,
 .lb-nav a.lb-prev {
+	opacity: 1;
 	height: 10%;
 	position: fixed;
 	top: 75vh;
 	width: 70px;
 }
-
 
 /*MEDIA QUERIES*/
 @media screen and (min-width: 768px) {
@@ -176,6 +171,7 @@ input:focus::placeholder {
 	}
 
 	.grid_image {
+		float: left;
 		width: 47%;
 		margin-left: 1.5%;
 		margin-right: 1.5%;
@@ -236,7 +232,6 @@ input:focus::placeholder {
 		top: 35vh;
 	}
 }
-
 
 
 
